@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+    <script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-8/esl.source.js"></script>
+    <script type="text/javascript">
+    require.config({
+        "baseUrl": "src",
+        "paths": {},
+        "packages": [
+            {
+                "name": "binder",
+                "location": "../node_modules/dom-data-bind/dist",
+                "main": "main"
+            }
+        ]
+    });
+    </script>
+</head>
+<body>
+<div id="main"><ui-header></ui-header><ui-content></ui-content><ui-footer></ui-footer></div>
+<script type="text/javascript">
+    require([
+        'binder',
+        'components/Header',
+        'components/Content',
+        'components/Footer'
+    ], function (
+        binder,
+        Header,
+        Content,
+        Footer
+    ) {
+        var main = document.getElementById('main');
+        var tree = new binder.Tree({
+            startNode: main,
+            endNode: main,
+            config: new binder.Config()
+        });
+        tree.registeComponent(Header);
+        tree.registeComponent(Content);
+        tree.registeComponent(Footer);
+        tree.traverse();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "dom-data-bind-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yibuyisheng/dom-data-bind-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yibuyisheng/dom-data-bind-test/issues"
+  },
+  "homepage": "https://github.com/yibuyisheng/dom-data-bind-test#readme",
+  "dependencies": {
+    "dom-data-bind": "github:yibuyisheng/dom-data-bind"
+  }
+}
