@@ -7,7 +7,7 @@ define(function (require) {
 
     Footer.prototype.tpl = '<div>footer</div>';
 
-    Footer.prototype.getStyle = function () {
+    Footer.getStyle = function () {
         return '#root# {height: 50px; line-height: 50px;}';
     };
 

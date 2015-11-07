@@ -30,13 +30,15 @@
         'components/Header',
         'components/Content',
         'components/Footer',
-        'components/InputRow'
+        'components/InputRow',
+        'components/Section'
     ], function (
         binder,
         Header,
         Content,
         Footer,
-        InputRow
+        InputRow,
+        Section
     ) {
         var main = document.getElementById('main');
         var tree = new binder.Tree({
@@ -48,6 +50,7 @@
         tree.registeComponent(Content);
         tree.registeComponent(Footer);
         tree.registeComponent(InputRow);
+        tree.registeComponent(Section);
         tree.traverse();
     });
 </script>

@@ -6,8 +6,16 @@ define(function () {
     }
 
     InputRow.prototype.tpl = [
-        '<div class="input-row"><!-- children --></div>'
+        '<div><!-- children --></div>'
     ].join('');
+
+    InputRow.getStyle = function () {
+        return [
+            '#root# {',
+                'display: flex',
+            '}'
+        ].join('');
+    };
 
     binder.inherit(InputRow, binder.Component);
 

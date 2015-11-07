@@ -34,7 +34,7 @@ define(function (require) {
     };
 
     Header.prototype.tpl = [
-        '<h1 title="${title}">',
+        '<h1 title="====${title}doubi">',
             '${contentText}',
         '</h1>'
     ].join('');

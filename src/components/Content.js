@@ -7,7 +7,10 @@ define(function (require) {
 
     Content.prototype.tpl = [
         '<div>',
-            '<ui-input-row><input type="text"></ui-input-row>',
+            '<ui-input-row>',
+                '<ui-section width="100px">姓名：</ui-section>',
+                '<ui-section flex="1"><ui-input type="text"></ui-section>',
+            '</ui-input-row>',
         '</div>'
     ].join('');
 
@@ -15,7 +18,7 @@ define(function (require) {
 
     };
 
-    Content.prototype.getStyle = function () {
+    Content.getStyle = function () {
         return [
             '#root# {flex: 1}'
         ].join('');
