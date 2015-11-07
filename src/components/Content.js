@@ -15,6 +15,12 @@ define(function (require) {
 
     };
 
+    Content.prototype.getStyle = function () {
+        return [
+            '#root# {flex: 1}'
+        ].join('');
+    };
+
     binder.inherit(Content, binder.Component);
 
     return Content;

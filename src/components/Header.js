@@ -19,7 +19,7 @@ define(function (require) {
         }, 1000);
     };
 
-    Header.prototype.getStyle = function () {
+    Header.getStyle = function () {
         return [
             '#root# {',
                 'height: 50px;',

@@ -7,6 +7,10 @@ define(function (require) {
 
     Footer.prototype.tpl = '<div>footer</div>';
 
+    Footer.prototype.getStyle = function () {
+        return '#root# {height: 50px; line-height: 50px;}';
+    };
+
     binder.inherit(Footer, binder.Component);
 
     return Footer;
