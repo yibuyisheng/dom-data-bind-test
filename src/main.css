@@ -11,15 +11,6 @@ body, html, #main {
 }
 
 
-.header {
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 0;
-    background: #9eab7f;
-}
 .content {
     flex: 1;
 }

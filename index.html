@@ -19,18 +19,24 @@
     </script>
 </head>
 <body>
-<div id="main"><ui-header></ui-header><ui-content></ui-content><ui-footer></ui-footer></div>
+<div id="main">
+    <ui-header title="hahah"></ui-header>
+    <ui-content></ui-content>
+    <ui-footer></ui-footer>
+</div>
 <script type="text/javascript">
     require([
         'binder',
         'components/Header',
         'components/Content',
-        'components/Footer'
+        'components/Footer',
+        'components/InputRow'
     ], function (
         binder,
         Header,
         Content,
-        Footer
+        Footer,
+        InputRow
     ) {
         var main = document.getElementById('main');
         var tree = new binder.Tree({
@@ -41,6 +47,7 @@
         tree.registeComponent(Header);
         tree.registeComponent(Content);
         tree.registeComponent(Footer);
+        tree.registeComponent(InputRow);
         tree.traverse();
     });
 </script>

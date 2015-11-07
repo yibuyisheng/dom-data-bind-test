@@ -5,7 +5,11 @@ define(function (require) {
         binder.Component.apply(this, arguments);
     }
 
-    Content.prototype.tpl = '<div class="content">content</div>';
+    Content.prototype.tpl = [
+        '<div>',
+            '<ui-input-row><input type="text"></ui-input-row>',
+        '</div>'
+    ].join('');
 
     Content.prototype.initialize = function () {
 

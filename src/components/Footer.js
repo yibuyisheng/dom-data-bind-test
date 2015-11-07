@@ -5,7 +5,7 @@ define(function (require) {
         binder.Component.apply(this, arguments);
     }
 
-    Footer.prototype.tpl = '<div class="footer">footer</div>';
+    Footer.prototype.tpl = '<div>footer</div>';
 
     binder.inherit(Footer, binder.Component);
 
