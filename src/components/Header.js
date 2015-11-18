@@ -1,45 +1,37 @@
 define(function (require) {
     var binder = require('binder');
 
-    function Header() {
-        binder.Component.apply(this, arguments);
-    }
+    return binder.Component.extends(
+        {
+            literalAttrReady: function () {
+                var me = this;
 
-    Header.prototype.initialize = function () {
-
-    };
-
-    Header.prototype.literalAttrReady = function () {
-        var me = this;
-
-        setInterval(function () {
-            me.setData({
-                contentText: new Date().getTime()
-            });
-        }, 1000);
-    };
-
-    Header.getStyle = function () {
-        return [
-            '#root# {',
-                'height: 50px;',
-                'line-height: 50px;',
-                'text-align: center;',
-                'font-weight: bold;',
-                'font-size: 18px;',
-                'margin: 0;',
-                'background: #9eab7f;',
-            '}'
-        ].join('');
-    };
-
-    Header.prototype.tpl = [
-        '<h1 title="====${title}doubi">',
-            '${contentText}',
-        '</h1>'
-    ].join('');
-
-    binder.inherit(Header, binder.Component);
-
-    return Header;
+                setInterval(function () {
+                    me.setData({
+                        contentText: new Date().getTime()
+                    });
+                }, 1000);
+            },
+            tpl: [
+                '<h1 title="====${title}doubi">',
+                    '${contentText}',
+                '</h1>'
+            ].join('')
+        },
+        {
+            getStyle: function () {
+                return [
+                    '#root# {',
+                        'height: 50px;',
+                        'line-height: 50px;',
+                        'text-align: center;',
+                        'font-weight: bold;',
+                        'font-size: 18px;',
+                        'margin: 0;',
+                        'background: #9eab7f;',
+                    '}'
+                ].join('');
+            }
+        }
+    );
 });

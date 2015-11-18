@@ -46,11 +46,13 @@
             endNode: main,
             config: new binder.Config()
         });
-        tree.registeComponent(Header);
-        tree.registeComponent(Content);
-        tree.registeComponent(Footer);
-        tree.registeComponent(InputRow);
-        tree.registeComponent(Section);
+        tree.registeComponents({
+            Header: Header,
+            Content: Content,
+            Footer: Footer,
+            InputRow: InputRow,
+            Section: Section
+        });
         tree.traverse();
     });
 </script>
