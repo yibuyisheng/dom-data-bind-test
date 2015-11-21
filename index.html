@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="./src/main.css">
     <script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-8/esl.source.js"></script>
@@ -29,9 +30,7 @@
         'binder',
         'components/Header',
         'components/Content',
-        'components/Footer',
-        'components/InputRow',
-        'components/Section'
+        'components/Footer'
     ], function (
         binder,
         Header,
@@ -49,9 +48,7 @@
         tree.registeComponents({
             Header: Header,
             Content: Content,
-            Footer: Footer,
-            InputRow: InputRow,
-            Section: Section
+            Footer: Footer
         });
         tree.traverse();
     });
