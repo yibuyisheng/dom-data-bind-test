@@ -6,7 +6,7 @@ define(function (require) {
     return binder.Component.extends(
         {
             literalAttrReady: function () {
-                
+                console.log(this.ref('div'));
             },
             componentClasses: {
                 InputRow: InputRow,
@@ -14,10 +14,13 @@ define(function (require) {
             },
             tpl: [
                 '<div>',
+                    '<div ref="div"></div>',
                     '<ui-input-row ref="row">',
                         '<ui-section width="100px">姓名：</ui-section>',
                         '<ui-section flex="1"><input type="text"></ui-section>',
                     '</ui-input-row>',
+                    '<div class="hahaha"></div>',
+                    '<p></p>',
                 '</div>'
             ].join('')
         },
